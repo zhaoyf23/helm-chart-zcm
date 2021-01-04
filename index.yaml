@@ -3,7 +3,7 @@ entries:
   zcm-env-base:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T15:31:32.640954514+08:00"
+    created: "2021-01-04T15:51:13.823673874+08:00"
     description: A Helm chart for Kubernetes
     digest: afc0fc32a238ec86807e016c1e2019291dd88d2aec21fa26a748dc66997d82b0
     name: zcm-env-base
@@ -11,4 +11,15 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-base-0.1.1.tgz
     version: 0.1.1
-generated: "2021-01-04T15:31:32.638821583+08:00"
+  zcm-env-cluster:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-04T15:51:13.824982484+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 8368fe70345054b4d240841ba9a688c9a1d70bfe3cb8d99f7c36675c4bb9d798
+    name: zcm-env-cluster
+    type: application
+    urls:
+    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-cluster-0.1.1.tgz
+    version: 0.1.1
+generated: "2021-01-04T15:51:13.821824291+08:00"
