@@ -3,7 +3,7 @@ entries:
   zcm-ansible:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T17:06:21.166188049+08:00"
+    created: "2021-01-04T17:06:27.839944094+08:00"
     description: A Helm chart for Kubernetes
     digest: 70ddbf808b298adbb61b0574c0ee2516b03254dc0c14c25e3b2d54727c6891af
     name: zcm-ansible
@@ -14,7 +14,7 @@ entries:
   zcm-application:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T17:06:21.168285663+08:00"
+    created: "2021-01-04T17:06:27.842587785+08:00"
     description: A Helm chart for Kubernetes
     digest: f6c9ce7464fbd4c99adaae4fe9e1437286439236073661307718d03aaf435a01
     name: zcm-application
@@ -25,7 +25,7 @@ entries:
   zcm-cmdb:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T17:06:21.17538949+08:00"
+    created: "2021-01-04T17:06:27.845079043+08:00"
     description: A Helm chart for Kubernetes
     digest: aed4f131ea0c364430fa6a55eaebfd779278a0e5639f146d27cba4b5d09f58c9
     name: zcm-cmdb
@@ -36,18 +36,18 @@ entries:
   zcm-env-base:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T17:06:21.176915521+08:00"
+    created: "2021-01-04T17:06:27.845659116+08:00"
     description: A Helm chart for Kubernetes
-    digest: afc0fc32a238ec86807e016c1e2019291dd88d2aec21fa26a748dc66997d82b0
+    digest: 2157c326b0b25dd18b5b646a4fdf9ece3e9e7282ce663bf9d7102a511ecb9031
     name: zcm-env-base
     type: application
     urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-base-0.1.1.tgz
-    version: 0.1.1
+    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-base-0.1.0.tgz
+    version: 0.1.0
   zcm-env-cluster:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T17:06:21.178243271+08:00"
+    created: "2021-01-04T17:06:27.846651611+08:00"
     description: A Helm chart for Kubernetes
     digest: 8368fe70345054b4d240841ba9a688c9a1d70bfe3cb8d99f7c36675c4bb9d798
     name: zcm-env-cluster
@@ -58,7 +58,7 @@ entries:
   zcm-env-local:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-04T17:06:21.179553438+08:00"
+    created: "2021-01-04T17:06:27.847568176+08:00"
     description: A Helm chart for Kubernetes
     digest: cd847a184619fe58db9bd7e35d5d3899b79d00590ab9e3ebc85de44a8f67acd2
     name: zcm-env-local
@@ -66,4 +66,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-local-0.1.1.tgz
     version: 0.1.1
-generated: "2021-01-04T17:06:21.164481946+08:00"
+generated: "2021-01-04T17:06:27.836000779+08:00"
