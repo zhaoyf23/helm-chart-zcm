@@ -1,8 +1,0 @@
-{
-   "insecure-registries" : [ "10.45.80.1"],
-   "log-opts": {
-    "max-size": "150m",
-    "max-file":"3"
-  },
-"live-restore": false
-}
