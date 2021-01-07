@@ -1,108 +1,9 @@
 apiVersion: v1
 entries:
-  zcm-ansible:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.765786552+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 9f71c54d81b8741f5e63ecbb6ac69b386dd8acc88842f109b94176ddb6c9ad03
-    name: zcm-ansible
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-ansible-0.1.0.tgz
-    version: 0.1.0
-  zcm-application:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.767709983+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 45395cb327d5c261839e7db3ea859d8e88f56ffc134774f6a575372883546f7b
-    name: zcm-application
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-application-0.1.0.tgz
-    version: 0.1.0
-  zcm-cmdb:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.769438935+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 3cf9faf63cbaed7313310809b73fb6cdeb3de1caee8a540cc4ae2d44fd6f451b
-    name: zcm-cmdb
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-cmdb-0.1.0.tgz
-    version: 0.1.0
-  zcm-env-base:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.769861174+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 931a0938c6e045f44be789f750243bb7d129bd88322ff1bf6ffc777834ef618c
-    name: zcm-env-base
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-base-0.1.0.tgz
-    version: 0.1.0
-  zcm-env-cluster:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.770271604+08:00"
-    description: A Helm chart for Kubernetes
-    digest: a470d4b45803b38d009d431b82e05b2bb520a0647b6ce066197589ba217d7a8f
-    name: zcm-env-cluster
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-cluster-0.1.0.tgz
-    version: 0.1.0
-  zcm-env-local:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.770653014+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 994d1f4dff9f6e716aa663b19f9318e45932cc102ad4ea62cab45dba5438ea11
-    name: zcm-env-local
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-env-local-0.1.0.tgz
-    version: 0.1.0
-  zcm-image:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.772237602+08:00"
-    description: A Helm chart for Kubernetes
-    digest: ce1763b07456bff5998eb294680095164ba52b77354d6b83d658359d9b6a4311
-    name: zcm-image
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-image-0.1.0.tgz
-    version: 0.1.0
-  zcm-mysql:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.773372997+08:00"
-    description: A Helm chart for Kubernetes
-    digest: d9e0e129eabce9d6a284517111c47452ee8505e914c9bdbcc657e2e3b6bbb797
-    name: zcm-mysql
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-mysql-0.1.0.tgz
-    version: 0.1.0
-  zcm-nginx:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.774620743+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 8972942e93a96679005f27e736f7d96481888ff8b3015b5fa0a0adba9ae7261f
-    name: zcm-nginx
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-nginx-0.1.0.tgz
-    version: 0.1.0
   zcm-portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.794564587+08:00"
+    created: "2021-01-07T19:56:37.069038006+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -147,65 +48,10 @@ entries:
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: 4d4e5f2b73dd27983719647f576f04925b6abcb04a9829e4dbfee9b7189d9539
+    digest: fc640ab3e8367d36444da0583f3a206cbefc8e8efe5ce9bd1ce839ce0d8e4fc6
     name: zcm-portal
     type: application
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-  zcm-redis:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.796439587+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 56aa4439b733eed75a6a2f7b4c2f5e1227a39c25850f503b7ce053754f949335
-    name: zcm-redis
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-redis-0.1.0.tgz
-    version: 0.1.0
-  zcm-resource:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.798324176+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 8395aa5f54ce0a685cb088dff95c539c3960ca1a8cf4a489afa1d00e5872c9ea
-    name: zcm-resource
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-resource-0.1.0.tgz
-    version: 0.1.0
-  zcm-service:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.800104025+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 30fbae73733544a8d2241c4819e435a841d44cf1f11c70ef826420f92a8467b3
-    name: zcm-service
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-service-0.1.0.tgz
-    version: 0.1.0
-  zcm-tool:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.802653501+08:00"
-    description: A Helm chart for Kubernetes
-    digest: a4a320ea3d5c1f05fc2ad23928c7b74fc8e2c9a504a7187db9001628752c3f99
-    name: zcm-tool
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-tool-0.1.0.tgz
-    version: 0.1.0
-  zcm-zcamp-rest-server:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-07T19:55:38.804162861+08:00"
-    description: A Helm chart for Kubernetes
-    digest: bb2c68ec95c4fb4a5230566d51012fc9b8630358c932fa07bf8be88adcd913b9
-    name: zcm-zcamp-rest-server
-    type: application
-    urls:
-    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-zcamp-rest-server-0.1.0.tgz
-    version: 0.1.0
-generated: "2021-01-07T19:55:38.763371956+08:00"
+generated: "2021-01-07T19:56:37.050014186+08:00"
