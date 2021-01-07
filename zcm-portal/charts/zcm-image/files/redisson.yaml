@@ -1,0 +1,27 @@
+clusterServersConfig:
+  idleConnectionTimeout: 3000
+  pingTimeout: 1000
+  connectTimeout: 3000
+  timeout: 3000
+  retryAttempts: 3
+  retryInterval: 1500
+  reconnectionTimeout: 3000
+  failedAttempts: 3
+  password: redis@123
+  subscriptionsPerConnection: 3
+  clientName: null
+  slaveSubscriptionConnectionMinimumIdleSize: 1
+  slaveSubscriptionConnectionPoolSize: 3
+  slaveConnectionMinimumIdleSize: 8
+  slaveConnectionPoolSize: 16
+  masterConnectionMinimumIdleSize: 8
+  masterConnectionPoolSize: 16
+  readMode: "SLAVE"
+  nodeAddresses:
+    - "redis://172.24.128.76:32507"
+    - "redis://172.24.128.77:32507"
+    - "redis://172.24.128.78:32507"
+    - "redis://172.24.128.73:32521"
+    - "redis://172.24.128.74:32521"
+    - "redis://172.24.128.75:32521"
+  scanInterval: 1000

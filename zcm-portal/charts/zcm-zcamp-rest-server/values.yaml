@@ -1,0 +1,79 @@
+# Default values for zcm-zcamp-rest-server.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+fullnameOverride: zcm-zcamp-rest-server
+
+replicaCount: 1
+
+namespace: zcm9
+
+nodeSelector:
+  aik: zcm9
+
+restartPolicy: Always
+
+image:
+  repository: 10.45.80.1/zcm9/zcm-zcamp-rest-server
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: C_20201027192126
+
+env:
+  - name: LANG
+    value: en_US.UTF-8
+  - name: HOSTIP
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_SERVER_VIP
+
+resources:
+  requests:
+    cpu: 1
+    memory: 4096Mi
+  limits:
+    cpu: 4
+    memory: 4096Mi
+
+ports:
+  - containerPort: 8081
+    protocol: TCP
+    name: http
+  - containerPort: 22
+    protocol: TCP
+    name: ssh
+
+volumeMounts:
+  - name: localtime
+    mountPath: /etc/localtime
+    readOnly: True
+  - name: zcm-timezone
+    mountPath: /etc/timezone
+    subPath: timezone
+    readOnly: True
+
+volumes:
+  - name: localtime
+    hostPath:
+      path: /etc/localtime
+
+cm:
+  - name: zcm-timezone
+    configMap:
+      name: zcm-timezone
+
+service:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 8081
+      protocol: TCP
+      targetPort: 8081
+    - name: ssh
+      port: 52912
+      protocol: TCP
+      targetPort: 22
+
+dnsPolicy: ClusterFirst
+clusterIP: None
