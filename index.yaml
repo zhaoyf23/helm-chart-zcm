@@ -3,7 +3,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-07T20:25:37.199672971+08:00"
+    created: "2021-01-07T20:34:04.58997868+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -48,10 +48,10 @@ entries:
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: 87afab6e2b8e9fa58cc46ba991ff3fced312bb2003d50e777eea774565ad451d
+    digest: 7f382ae09559028c7ac5a06845a8cb42e6b8f711a68b4e429888993efd82f218
     name: zcm-portal
     type: application
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-07T20:25:37.177835099+08:00"
+generated: "2021-01-07T20:34:04.569769847+08:00"
