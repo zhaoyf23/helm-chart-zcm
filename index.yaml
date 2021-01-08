@@ -3,7 +3,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-07T20:38:18.290443047+08:00"
+    created: "2021-01-08T11:31:12.115730494+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -54,4 +54,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-07T20:38:18.272844721+08:00"
+generated: "2021-01-08T11:31:12.09619697+08:00"
