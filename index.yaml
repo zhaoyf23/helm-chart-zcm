@@ -3,10 +3,10 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-01-14T11:38:30.819043312+08:00"
+    created: "2021-01-14T12:05:08.500383052+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
-    digest: 4d81bb3f914202fa0cedf4575b3887ff3f760de1df6fd4e0b29cff3559eb32af
+    digest: eb5f530f8d188e37f8575a44b168de4b0d4a52466caca7c5406e7905ab35b49d
     home: https://goharbor.io
     icon: https://raw.githubusercontent.com/goharbor/harbor/master/docs/img/harbor_logo.png
     keywords:
@@ -28,7 +28,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-14T11:38:30.839781585+08:00"
+    created: "2021-01-14T12:05:08.518255967+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -79,4 +79,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-14T11:38:30.810501929+08:00"
+generated: "2021-01-14T12:05:08.493091678+08:00"
