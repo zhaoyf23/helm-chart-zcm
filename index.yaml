@@ -3,7 +3,7 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-01-15T14:17:53.856387982+08:00"
+    created: "2021-01-15T14:18:17.765215933+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 0419c3bc8ea7f508a5470deaa0b5ff4498da73ead9dedb3c8fd52263e83c22c0
@@ -28,9 +28,9 @@ entries:
   zcm-mysql:
   - apiVersion: v2
     appVersion: 5.7.32
-    created: "2021-01-15T14:17:53.857477191+08:00"
+    created: "2021-01-15T14:18:17.766750562+08:00"
     description: A Helm chart for Kubernetes
-    digest: 704471f7e8e4512ebda3f03d4b42bba62fe67d92e6bab7d98dbded4e73361c68
+    digest: e3677a726ced89390c8461f57a055b8e8e86b5d10770beef915d224e267b8806
     name: zcm-mysql
     type: application
     urls:
@@ -39,7 +39,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 9.0.27
-    created: "2021-01-15T14:17:53.874031722+08:00"
+    created: "2021-01-15T14:18:17.783524199+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -90,4 +90,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-15T14:17:53.845859154+08:00"
+generated: "2021-01-15T14:18:17.754025167+08:00"
