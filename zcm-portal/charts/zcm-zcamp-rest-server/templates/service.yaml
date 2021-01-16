@@ -5,7 +5,7 @@ metadata:
   name: {{ include "zcm-zcamp-rest-server.fullname" . }}
   labels:
     {{- include "zcm-zcamp-rest-server.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   clusterIP: {{ .Values.clusterIP }}
   type: {{ .Values.service.type }}

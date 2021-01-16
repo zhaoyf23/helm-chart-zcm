@@ -4,7 +4,7 @@ metadata:
   name: {{ include "zcm-resource.fullname" . }}
   labels:
     {{- include "zcm-resource.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -33,7 +33,7 @@ spec:
               readOnly: {{ .readOnly }}
             {{- end }}
       dnsPolicy: {{ .Values.dnsPolicy }}
-      {{- with .Values.nodeSelector }}
+      {{- with .Values.global.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}

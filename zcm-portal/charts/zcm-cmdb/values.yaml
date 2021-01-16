@@ -6,11 +6,6 @@ fullnameOverride: zcm-cmdb
 
 replicaCount: 1
 
-namespace: zcm9
-
-nodeSelector:
-  aik: zcm9
-
 restartPolicy: Always
 
 image:

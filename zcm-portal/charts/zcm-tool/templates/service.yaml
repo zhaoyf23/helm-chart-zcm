@@ -5,7 +5,7 @@ metadata:
   name: {{ include "zcm-tool.fullname" . }}
   labels:
     {{- include "zcm-tool.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   clusterIP: {{ .Values.clusterIP }}
   type: {{ .Values.service.type }}

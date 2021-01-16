@@ -4,7 +4,7 @@ metadata:
   name: {{ include "zcm-redis.fullname" . }}
   labels:
     {{- include "zcm-redis.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -34,7 +34,7 @@ spec:
             {{- end }}
           command: [ "redis-server", "/data/conf/redis.conf" ]
       dnsPolicy: {{ .Values.dnsPolicy }}
-      {{- with .Values.nodeSelector }}
+      {{- with .Values.global.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}

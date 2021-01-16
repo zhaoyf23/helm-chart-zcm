@@ -5,7 +5,7 @@ metadata:
   name: {{ include "zcm-redis.fullname" . }}
   labels:
     {{- include "zcm-redis.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   clusterIP: {{ .Values.clusterIP }}
   type: {{ .Values.service.type }}
