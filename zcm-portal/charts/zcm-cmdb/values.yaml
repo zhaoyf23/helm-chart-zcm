@@ -14,7 +14,7 @@ nodeSelector:
 restartPolicy: Always
 
 image:
-  repository: 10.45.80.1/zcm9/zcm-cmdb
+  repository: zcm9/zcm-cmdb
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: D_20200915091233

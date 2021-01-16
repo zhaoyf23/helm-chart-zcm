@@ -14,7 +14,7 @@ nodeSelector:
 restartPolicy: Always
 
 image:
-  repository: 10.45.80.1/zcm9/zcm-nginx-aik
+  repository: zcm9/zcm-nginx-aik
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: C_20201222105649
