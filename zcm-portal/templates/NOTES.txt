@@ -6,3 +6,18 @@ To learn more about the release, try:
 
   $ helm status {{ .Release.Name }}
   $ helm get all {{ .Release.Name }}
+
+To learn more about the deployment, try:
+  $ kubectl get deploy -n {{ .Values.global.namespace }}
+
+To learn more about the daemonset, try:
+  $ kubectl get ds -n {{ .Values.global.namespace }}
+
+To learn more about the configmap, try:
+  $ kubectl get cm -n {{ .Values.global.namespace }}
+
+To learn more about the service, try:
+  $ kubectl get svc -n {{ .Values.global.namespace }}
+
+To learn more about the pod, try:
+  $ kubectl get pod -n {{ .Values.global.namespace }}

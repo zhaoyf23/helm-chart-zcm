@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "zcm-application.fullname" . }}
+  name: {{ include "zcm-image.fullname" . }}
   labels:
-    {{- include "zcm-application.labels" . | nindent 4 }}
+    {{- include "zcm-image.labels" . | nindent 4 }}
   namespace: {{ .Values.global.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "zcm-application.selectorLabels" . | nindent 6 }}
+      {{- include "zcm-image.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "zcm-application.selectorLabels" . | nindent 8 }}
+        {{- include "zcm-image.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - env:

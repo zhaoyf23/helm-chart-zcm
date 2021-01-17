@@ -7,4 +7,4 @@ metadata:
     "helm.sh/hook": pre-install
     "helm.sh/hook-weight": "1"
 data:
-  NODE_IP_ADDR: 10.45.80.82
+  NODE_IP_ADDR: 172.16.17.90

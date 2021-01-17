@@ -1,14 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: {{ include "zcm-image.fullname" . }}
   labels:
     {{- include "zcm-image.labels" . | nindent 4 }}
   namespace: {{ .Values.global.namespace }}
-  annotations:
-    "helm.sh/hook-weight": "2"
 spec:
-  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       {{- include "zcm-image.selectorLabels" . | nindent 6 }}

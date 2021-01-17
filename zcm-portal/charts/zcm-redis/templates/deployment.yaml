@@ -6,7 +6,9 @@ metadata:
     {{- include "zcm-redis.labels" . | nindent 4 }}
   namespace: {{ .Values.global.namespace }}
   annotations:
-    "helm.sh/hook-weight": "1"
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "-11"
+    "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

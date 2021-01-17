@@ -102,6 +102,11 @@ env:
       configMapKeyRef:
         name: zcm-env-local
         key: NODE_IP_ADDR
+#  - name: NODE_IP_ADDR
+#    valueFrom:
+#      configMapKeyRef:
+#        name: zcm-env-base
+#        key: ZCM_SERVER_VIP
 
 resources:
   requests:
@@ -130,10 +135,6 @@ volumeMounts:
   - name: properties
     mountPath: /app/conf/application.properties
     subPath: application.properties
-    readOnly: True
-  - name: properties
-    mountPath: /app/conf/redisson.yaml
-    subPath: redisson.yaml
     readOnly: True
   - name: zlogs
     mountPath: /tmp/zlogs
