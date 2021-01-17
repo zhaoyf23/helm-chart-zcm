@@ -3,6 +3,9 @@ kind: ConfigMap
 metadata:
   name: {{ include "zcm-env-base.fullname" . }}
   namespace: {{ .Values.global.namespace }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "1"
 data:
   LOG_LEVEL_PROFILE: test
   ZCM_ANSIBLE_TAG: C_20200828151700

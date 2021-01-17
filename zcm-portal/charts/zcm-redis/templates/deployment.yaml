@@ -5,6 +5,8 @@ metadata:
   labels:
     {{- include "zcm-redis.labels" . | nindent 4 }}
   namespace: {{ .Values.global.namespace }}
+  annotations:
+    "helm.sh/hook-weight": "1"
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

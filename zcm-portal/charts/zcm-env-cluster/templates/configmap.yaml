@@ -3,6 +3,9 @@ kind: ConfigMap
 metadata:
   name: {{ include "zcm-env-cluster.fullname" . }}
   namespace: {{ .Values.global.namespace }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "1"
 data:
   K8S_MASTER_URL: http://10.45.80.82:52080
   K8S_MASTER_VIP: zcm-nginx.zcm9.svc.cluster.local
