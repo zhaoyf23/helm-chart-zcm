@@ -3,10 +3,10 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-01-17T11:11:22.286258034+08:00"
+    created: "2021-01-17T17:03:07.517950028+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
-    digest: 3c66b61f7fecddc019353593046181b82b7a72cf76f255f3c958587b5fdeac3a
+    digest: ff794c7d5957bfd2bad7258d90ec651966c4007d9d259b69ac18c58286cd3ac1
     home: https://goharbor.io
     icon: https://raw.githubusercontent.com/goharbor/harbor/master/docs/img/harbor_logo.png
     keywords:
@@ -28,7 +28,7 @@ entries:
   zcm-mysql:
   - apiVersion: v2
     appVersion: 5.7.32
-    created: "2021-01-17T11:11:22.291173012+08:00"
+    created: "2021-01-17T17:03:07.519302485+08:00"
     description: A Helm chart for Kubernetes
     digest: 8acd7c76ef8b73ed900ae1b66948d83636d9ac42f85ac542e4db42cb90933bdb
     name: zcm-mysql
@@ -39,7 +39,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 9.0.27
-    created: "2021-01-17T11:11:22.349329114+08:00"
+    created: "2021-01-17T17:03:07.539787603+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -90,4 +90,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-17T11:11:22.264739598+08:00"
+generated: "2021-01-17T17:03:07.510205536+08:00"
