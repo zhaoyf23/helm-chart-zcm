@@ -19,7 +19,11 @@ spec:
         - env:
           {{ toYaml .Values.env | nindent 10 }}
           name: {{ .Chart.Name }}
+          {{- if not .Values.global.repository }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          {{- else }}
+          image: "{{ .Values.global.repository }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             {{- toYaml .Values.ports | nindent 12 }}
@@ -33,7 +37,7 @@ spec:
               readOnly: {{ .readOnly }}
             {{- end }}
       dnsPolicy: {{ .Values.dnsPolicy }}
-      {{- with .Values.nodeSelector }}
+      {{- with .Values.global.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}

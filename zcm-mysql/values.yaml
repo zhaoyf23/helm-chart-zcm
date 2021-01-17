@@ -6,15 +6,16 @@ fullnameOverride: zcm-mysql
 
 replicaCount: 1
 
-namespace: zcm9
-
-nodeSelector:
-  aik: zcm9
-
 restartPolicy: Always
 
+global:
+  repository: 10.45.80.1
+  namespace: zcm9
+  nodeSelector:
+    aik: zcm9
+
 image:
-  repository: 10.45.80.1/zcm9/mysql
+  repository: zcm9/mysql
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: 5.7.32
