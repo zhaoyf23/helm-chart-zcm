@@ -1,23 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "zcm-redis.fullname" . }}
+  name: {{ include "zcm-mysql.fullname" . }}
   labels:
-    {{- include "zcm-redis.labels" . | nindent 4 }}
+    {{- include "zcm-mysql.labels" . | nindent 4 }}
   namespace: {{ .Values.global.namespace }}
-  annotations:
-    "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "-11"
-    "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "zcm-redis.selectorLabels" . | nindent 6 }}
+      {{- include "zcm-mysql.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "zcm-redis.selectorLabels" . | nindent 8 }}
+        {{- include "zcm-mysql.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - env:
@@ -40,9 +36,8 @@ spec:
               subPath: {{ .subPath }}
               readOnly: {{ .readOnly }}
             {{- end }}
-          command: [ "redis-server", "/data/conf/redis.conf" ]
       dnsPolicy: {{ .Values.dnsPolicy }}
-      {{- with .Values.global.nodeSelector }}
+      {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}

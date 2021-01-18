@@ -5,7 +5,7 @@ metadata:
   name: {{ include "zcm-mysql.fullname" . }}
   labels:
     {{- include "zcm-mysql.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   clusterIP: {{ .Values.clusterIP }}
   type: {{ .Values.service.type }}
@@ -21,7 +21,7 @@ metadata:
   name: {{ include "zcm-mysql.fullname" . }}-outer
   labels:
     {{- include "zcm-mysql.labels" . | nindent 4 }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.global.namespace }}
 spec:
   type: {{ .Values.service.typeouter }}
   ports:

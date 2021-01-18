@@ -1,5 +1,5 @@
 apiVersion: v2
-name: zcm-portal
+name: zcm-base
 description: A Helm chart for Kubernetes
 
 # A chart can be either an 'application' or a 'library' chart.
@@ -20,44 +20,17 @@ version: 0.1.0
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
-appVersion: 9.0.27
+appVersion: 0.1.0
 
-icon: file://./zcm.jpg
+icon: file://./base.jpg
 
 dependencies:
-  - name: zcm-ansible
+  - name: zcm-mysql
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-application
+  - name: zcm-redis
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-cmdb
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-env-base
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-env-cluster
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-env-local
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-image
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-nginx
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-resource
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-service
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-tool
-    version: 0.1.0
-    repository: https://zhaoyf23.github.io/helm-chart-zcm/
-  - name: zcm-zcamp-rest-server
+  - name: zcm-timezone
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/

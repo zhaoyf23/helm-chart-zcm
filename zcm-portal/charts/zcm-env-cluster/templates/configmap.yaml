@@ -3,12 +3,9 @@ kind: ConfigMap
 metadata:
   name: {{ include "zcm-env-cluster.fullname" . }}
   namespace: {{ .Values.global.namespace }}
-  annotations:
-    "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "1"
 data:
   K8S_MASTER_URL: http://10.45.80.82:52080
-  K8S_MASTER_VIP: zcm-nginx.zcm9.svc.cluster.local
+  K8S_MASTER_VIP: zcm-nginx
   ZCM_ABTEST_PORT: "52301"
   ZCM_ABTEST_SSL_PORT: "25301"
   ZCM_APPLICATION_PORT: "52380"
@@ -32,17 +29,17 @@ data:
   ZCM_IMAGE_PORT: "52280"
   ZCM_IMAGE_SSL_PORT: "25280"
   ZCM_IMAGE_TAG: D_20201026103740
-  ZCM_MASTER_VIP: zcm-nginx.zcm9.svc.cluster.local
+  ZCM_MASTER_VIP: zcm-nginx
   ZCM_MWCONSOLE_PORT: "52091"
   ZCM_NODE_PROXY_TAG: 20191205_1.15.8.2_java
   ZCM_OCS_LAYOUT_URL: http://10.45.82.51:2017/ocs/
   ZCM_OCS_TEST_URL: http://10.45.82.51:2017/ocs/
   ZCM_PINPOINT_URL: http://apm-pp.zsmart.com/
-  ZCM_REDIS_SERVER_LIST: zcm-redis.zcm9.svc.cluster.local:6379
+  ZCM_REDIS_SERVER_LIST: zcm-redis:6379
   ZCM_RESOURCE_PORT: "52180"
   ZCM_RESOURCE_SSL_PORT: "25180"
   ZCM_RESOURCE_TAG: C_20200824201236
-  ZCM_SERVER_LIST: zcm-nginx.zcm9.svc.cluster.local
+  ZCM_SERVER_LIST: zcm-nginx
   ZCM_SERVICE_PORT: "52680"
   ZCM_SERVICE_SSL_PORT: "25680"
   ZCM_SERVICE_TAG: C_20200904113802

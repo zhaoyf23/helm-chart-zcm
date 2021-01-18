@@ -8,11 +8,8 @@ replicaCount: 1
 
 restartPolicy: Always
 
-global:
-  repository: 10.45.80.1
-  namespace: zcm9
-  nodeSelector:
-    aik: zcm9
+nodeSelector:
+  db: mysql
 
 image:
   repository: zcm9/mysql
