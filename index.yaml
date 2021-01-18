@@ -3,7 +3,7 @@ entries:
   zcm-base:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-01-18T17:39:57.981068133+08:00"
+    created: "2021-01-18T17:40:07.437910668+08:00"
     dependencies:
     - name: zcm-mysql
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -25,7 +25,7 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-01-18T17:39:57.991466504+08:00"
+    created: "2021-01-18T17:40:07.444265471+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: 210ec148fa250ba413f098d3214dcfb91fe68fd9fc666d90bf729de99e236606
@@ -50,7 +50,7 @@ entries:
   zcm-mysql:
   - apiVersion: v2
     appVersion: 5.7.32
-    created: "2021-01-18T17:39:57.993639183+08:00"
+    created: "2021-01-18T17:40:07.445610703+08:00"
     description: A Helm chart for Kubernetes
     digest: a4dfed74546a15812caac43aaba4797d4938ae6ae6cc55a349f40f8ff87ba00f
     icon: file://./mysql.jpg
@@ -62,7 +62,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 9.0.27
-    created: "2021-01-18T17:39:58.012745966+08:00"
+    created: "2021-01-18T17:40:07.467594388+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -88,17 +88,11 @@ entries:
     - name: zcm-nginx
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
-    - name: zcm-redis
-      repository: https://zhaoyf23.github.io/helm-chart-zcm/
-      version: 0.1.0
     - name: zcm-resource
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
     - name: zcm-service
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
-      version: 0.1.0
-    - name: zcm-timezone
-      repository: https://zhaoyf23.github.io/helm-chart-zcm
       version: 0.1.0
     - name: zcm-tool
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -107,11 +101,11 @@ entries:
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: 7129b338a06035289bbb297a8f31e6fec2faad8da872d05ce4e7dc3869a752b8
+    digest: 521f52a65ad6489e8ea0a808cb0b5eb6abee2d915788ad49bafd00c75ec62655
     icon: file://./zcm.jpg
     name: zcm-portal
     type: application
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-18T17:39:57.978556459+08:00"
+generated: "2021-01-18T17:40:07.43309018+08:00"
