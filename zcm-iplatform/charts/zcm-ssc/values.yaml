@@ -45,7 +45,7 @@ env:
   - name: ZCM_SSC_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-base
+        name: zcm-env-cluster
         key: ZCM_SSC_PORT
   - name: ZCM_SERVER_VIP
     valueFrom:
@@ -55,12 +55,12 @@ env:
   - name: ZCM_SERVER_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-cluster
+        name: zcm-env-base
         key: ZCM_SERVER_PORT
   - name: ZCM_SERVER_SSL_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-cluster
+        name: zcm-env-base
         key: ZCM_SERVER_SSL_PORT
   - name: ZCM_SSC_ZCIP_URL
     valueFrom:
@@ -75,7 +75,7 @@ env:
   - name: ZCM_REDIS_PASSWORD
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-cluster
+        name: zcm-env-base
         key: ZCM_REDIS_PASSWORD
   - name: APM_INIT
     valueFrom:
