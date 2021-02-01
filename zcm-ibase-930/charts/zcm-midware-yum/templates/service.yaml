@@ -1,0 +1,15 @@
+# Headless service for zcm-midware-yum.
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "zcm-midware-yum.fullname" . }}
+  labels:
+    {{- include "zcm-midware-yum.labels" . | nindent 4 }}
+  namespace: {{ .Values.global.namespace }}
+spec:
+  clusterIP: {{ .Values.clusterIP }}
+  type: {{ .Values.service.type }}
+  ports:
+    {{- toYaml .Values.service.ports | nindent 4 }}
+  selector:
+    {{- include "zcm-midware-yum.selectorLabels" . | nindent 4 }}

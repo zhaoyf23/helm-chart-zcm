@@ -1,0 +1,30 @@
+# Headless service for zcm-mysql.
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "zcm-mysql.fullname" . }}
+  labels:
+    {{- include "zcm-mysql.labels" . | nindent 4 }}
+  namespace: {{ .Values.global.namespace }}
+spec:
+  clusterIP: {{ .Values.clusterIP }}
+  type: {{ .Values.service.type }}
+  ports:
+    {{- toYaml .Values.service.ports | nindent 4 }}
+  selector:
+    {{- include "zcm-mysql.selectorLabels" . | nindent 4 }}
+---
+# Client service for zcm-mysql.
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "zcm-mysql.fullname" . }}-outer
+  labels:
+    {{- include "zcm-mysql.labels" . | nindent 4 }}
+  namespace: {{ .Values.global.namespace }}
+spec:
+  type: {{ .Values.service.typeouter }}
+  ports:
+    {{- toYaml .Values.service.portsouter | nindent 4 }}
+  selector:
+    {{- include "zcm-mysql.selectorLabels" . | nindent 4 }}

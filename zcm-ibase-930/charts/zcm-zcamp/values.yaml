@@ -1,0 +1,169 @@
+# Default values for zcm-zcamp.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+fullnameOverride: zcm-zcamp
+
+replicaCount: 1
+
+restartPolicy: Always
+
+image:
+  repository: zcm9/zcm-zcamp
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: C_20201229171049
+
+env:
+  - name: LANG
+    value: en_US.UTF-8
+  - name: CLOUD_APP_NAME
+    value: paas_zcm-zcamp
+  - name: APM_INIT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_APM_INIT
+  - name: ZCAMP_JDBC_URL
+    value: "jdbc:mysql://zcm-mysql:3306/zcm_zcamp"
+  - name: ZCAMP_JDBC_USR
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_MYSQL_USER
+  - name: ZCAMP_JDBC_PASS
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_MYSQL_PASSWORD
+  - name: ZCAMP_ANSIBLE_REST_SERVER
+    value: "http://zcm-nginx:52876/rest"
+  - name: ZCAMP_JEDIS_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_REDIS_SERVER_LIST
+  - name: ZCAMP_JEDIS_PASSWORD
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_REDIS_PASSWORD
+  - name: ZCM_SSC_PORT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_SSC_PORT
+  - name: ZCM_RESOURCE_PORT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_RESOURCE_PORT
+  - name: ZCM_CMDB_PORT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_CMDB_PORT
+  - name: ZCM_NGINX_PORT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_NGINX_PORT
+  - name: LOG_LEVEL_PROFILE
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: LOG_LEVEL_PROFILE
+  - name: ZCM_MIDWARE_ZCACHE_REST
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_MIDWARE_ZCACHE_REST
+  - name: ZCM_MIDWARE_ZMQ_REST
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_MIDWARE_ZMQ_REST
+  - name: ZCM_MIDWARE_ZDAAS_REST
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_MIDWARE_ZDAAS_REST
+  - name: ZCM_SERVER_VIP
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_SERVER_VIP
+  - name: ZCM_SERVER_PORT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_SERVER_PORT
+  - name: ZCM_SERVER_SSL_PORT
+    valueFrom:
+      configMapKeyRef:
+        name: zcm-env-base
+        key: ZCM_SERVER_SSL_PORT
+  - name: REDIS_SERIALIZER_TYPE
+    value: "json"
+
+resources:
+  requests:
+    cpu: 1
+    memory: 4096Mi
+  limits:
+    cpu: 4
+    memory: 4096Mi
+
+ports:
+  - containerPort: 8080
+    protocol: TCP
+    name: http
+  - containerPort: 9443
+    protocol: TCP
+    name: https
+
+volumeMounts:
+  - name: localtime
+    mountPath: /etc/localtime
+    readOnly: True
+  - name: zcm-timezone
+    mountPath: /etc/timezone
+    subPath: timezone
+    readOnly: True
+  - name: collectd
+    mountPath: /root/collectd
+    readOnly: False
+  - name: supervisord
+    mountPath: /root/supervisord
+    readOnly: False
+
+volumes:
+  - name: localtime
+    hostPath:
+      path: /etc/localtime
+  - name: collectd
+    hostPath:
+      path: /root/collectd
+  - name: supervisord
+    hostPath:
+      path: /root/supervisord
+
+cm:
+  - name: zcm-timezone
+    configMap:
+      name: zcm-timezone
+
+service:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 52860
+      protocol: TCP
+      targetPort: 8080
+    - name: https
+      port: 25860
+      protocol: TCP
+      targetPort: 9443
+
+dnsPolicy: ClusterFirst
+clusterIP: None
