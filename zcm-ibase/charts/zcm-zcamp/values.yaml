@@ -56,7 +56,7 @@ env:
   - name: ZCM_RESOURCE_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-base
+        name: zcm-env-cluster
         key: ZCM_RESOURCE_PORT
   - name: ZCM_CMDB_PORT
     valueFrom:
