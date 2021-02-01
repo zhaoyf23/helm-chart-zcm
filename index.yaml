@@ -3,7 +3,7 @@ entries:
   zcm-base:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-02-01T09:36:43.870299821+08:00"
+    created: "2021-02-01T10:25:46.881931442+08:00"
     dependencies:
     - name: zcm-mysql
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -25,7 +25,7 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-02-01T09:36:43.876671716+08:00"
+    created: "2021-02-01T10:25:46.890411255+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: ed80a67c2ba0aea07d3f29d8b95d8b285e87e638663e259a8b9caf4cbb786de5
@@ -50,7 +50,7 @@ entries:
   zcm-ibase:
   - apiVersion: v2
     appVersion: 9.0.30
-    created: "2021-02-01T09:36:43.889860719+08:00"
+    created: "2021-02-01T10:25:46.900897869+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -70,6 +70,9 @@ entries:
     - name: zcm-env-local
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
+    - name: zcm-env-nms
+      repository: https://zhaoyf23.github.io/helm-chart-zcm/
+      version: 0.1.0
     - name: zcm-midware-yum
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
@@ -86,7 +89,7 @@ entries:
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
     description: Ibase component for installing ZCM
-    digest: acde663a0352904e31df88c97dc5c3b2d7dd97cf13306f227b96b10cf21dcd8c
+    digest: 9a6cfe044d64b06b48032716e7e2ade0b37e5d84854e8b53e790eef452d9c0a1
     icon: file://./zcm.jpg
     name: zcm-ibase
     type: application
@@ -96,7 +99,7 @@ entries:
   zcm-iplatform:
   - apiVersion: v2
     appVersion: 9.0.30
-    created: "2021-02-01T09:36:43.90120638+08:00"
+    created: "2021-02-01T10:25:46.915566051+08:00"
     dependencies:
     - name: zcm-application
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -130,7 +133,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 9.0.27
-    created: "2021-02-01T09:36:43.918407691+08:00"
+    created: "2021-02-01T10:25:46.930666222+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -179,7 +182,7 @@ entries:
   zcm-system-base:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-02-01T09:36:43.921189132+08:00"
+    created: "2021-02-01T10:25:46.934868604+08:00"
     dependencies:
     - name: zcm-mysql
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -198,4 +201,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-system-base-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-01T09:36:43.867250235+08:00"
+generated: "2021-02-01T10:25:46.878459341+08:00"
