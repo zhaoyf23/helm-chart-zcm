@@ -1,0 +1,60 @@
+apiVersion: v2
+name: zcm-ibase
+description: Ibase component for installing ZCM
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 0.1.0
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+appVersion: 9.0.30
+
+icon: file://./zcm.jpg
+
+dependencies:
+  - name: zcm-ansible
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-cmdb
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-dingding
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-env-base
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-env-cluster
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-env-local
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-midware-yum
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-nginx
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-portal
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-zcamp
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-zcamp-rest-server
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/

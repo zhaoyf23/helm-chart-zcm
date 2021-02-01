@@ -1,0 +1,15 @@
+# Headless service for zcm-resource.
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "zcm-resource.fullname" . }}
+  labels:
+    {{- include "zcm-resource.labels" . | nindent 4 }}
+  namespace: {{ .Values.global.namespace }}
+spec:
+  clusterIP: {{ .Values.clusterIP }}
+  type: {{ .Values.service.type }}
+  ports:
+    {{- toYaml .Values.service.ports | nindent 4 }}
+  selector:
+    {{- include "zcm-resource.selectorLabels" . | nindent 4 }}
