@@ -55,7 +55,7 @@ env:
   - name: ZCM_SERVER_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-cluster
+        name: zcm-env-base
         key: ZCM_SERVER_PORT
   - name: APM_INIT
     valueFrom:
@@ -95,7 +95,7 @@ ports:
     name: https
   - containerPort: 52053
     protocol: TCP
-    name: dnsPort
+    name: dnsport
 
 volumeMounts:
   - name: localtime
@@ -146,7 +146,7 @@ service:
       port: 25802
       protocol: TCP
       targetPort: 25802
-    - name: dnsPort
+    - name: dnsport
       port: 52053
       protocol: TCP
       targetPort: 52053

@@ -80,7 +80,7 @@ env:
   - name: ZCM_ZCIP_SERVER_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-base
+        name: zcm-env-cicd
         key: ZCM_ZCIP_SERVER_PORT
   - name: PROXY_FLAG
     value: "N"

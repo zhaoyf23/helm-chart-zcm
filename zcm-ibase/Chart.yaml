@@ -37,6 +37,9 @@ dependencies:
   - name: zcm-env-base
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-env-cicd
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
   - name: zcm-env-cluster
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/
