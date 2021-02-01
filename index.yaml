@@ -3,7 +3,7 @@ entries:
   zcm-base:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-02-01T09:25:43.765039142+08:00"
+    created: "2021-02-01T09:26:11.88772493+08:00"
     dependencies:
     - name: zcm-mysql
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -25,7 +25,7 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-02-01T09:25:43.771495032+08:00"
+    created: "2021-02-01T09:26:11.897241314+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: ed80a67c2ba0aea07d3f29d8b95d8b285e87e638663e259a8b9caf4cbb786de5
@@ -50,7 +50,7 @@ entries:
   zcm-ibase:
   - apiVersion: v2
     appVersion: 9.0.30
-    created: "2021-02-01T09:25:43.78535929+08:00"
+    created: "2021-02-01T09:26:11.915860227+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -86,7 +86,7 @@ entries:
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
       version: 0.1.0
     description: Ibase component for installing ZCM
-    digest: 527d222fd34ef5867fce480d6e3536d6365571a95ddf62b46d9b7e5e1bc54e29
+    digest: d290a577bfc440d90220705ee26892e3b2650f147fac98b00bfa9bf82a991279
     icon: file://./zcm.jpg
     name: zcm-ibase
     type: application
@@ -96,7 +96,7 @@ entries:
   zcm-iplatform:
   - apiVersion: v2
     appVersion: 9.0.30
-    created: "2021-02-01T09:25:43.795315221+08:00"
+    created: "2021-02-01T09:26:11.929305879+08:00"
     dependencies:
     - name: zcm-application
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -130,7 +130,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 9.0.27
-    created: "2021-02-01T09:25:43.813421627+08:00"
+    created: "2021-02-01T09:26:11.949036054+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -179,7 +179,7 @@ entries:
   zcm-system-base:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-02-01T09:25:43.816386406+08:00"
+    created: "2021-02-01T09:26:11.953103223+08:00"
     dependencies:
     - name: zcm-mysql
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -198,4 +198,4 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-system-base-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-01T09:25:43.762179812+08:00"
+generated: "2021-02-01T09:26:11.882496062+08:00"
