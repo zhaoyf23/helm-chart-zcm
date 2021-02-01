@@ -51,7 +51,7 @@ env:
   - name: ZCM_SSC_PORT
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-base
+        name: zcm-env-cluster
         key: ZCM_SSC_PORT
   - name: ZCM_RESOURCE_PORT
     valueFrom:
