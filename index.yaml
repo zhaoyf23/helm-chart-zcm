@@ -3,7 +3,7 @@ entries:
   zcm-base:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-01-26T12:01:19.849240367+08:00"
+    created: "2021-02-01T09:05:14.538496355+08:00"
     dependencies:
     - name: zcm-mysql
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -25,7 +25,7 @@ entries:
   zcm-harbor:
   - apiVersion: v1
     appVersion: 1.10.6
-    created: "2021-01-26T12:01:19.85558626+08:00"
+    created: "2021-02-01T09:05:14.54624391+08:00"
     description: An open source trusted cloud native registry that stores, signs,
       and scans content
     digest: ed80a67c2ba0aea07d3f29d8b95d8b285e87e638663e259a8b9caf4cbb786de5
@@ -50,7 +50,7 @@ entries:
   zcm-portal:
   - apiVersion: v2
     appVersion: 9.0.27
-    created: "2021-01-26T12:01:19.873992878+08:00"
+    created: "2021-02-01T09:05:14.576129762+08:00"
     dependencies:
     - name: zcm-ansible
       repository: https://zhaoyf23.github.io/helm-chart-zcm/
@@ -96,4 +96,26 @@ entries:
     urls:
     - https://zhaoyf23.github.io/helm-chart-zcm/zcm-portal-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-26T12:01:19.84658454+08:00"
+  zcm-system-base:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-02-01T09:05:14.579349444+08:00"
+    dependencies:
+    - name: zcm-mysql
+      repository: https://zhaoyf23.github.io/helm-chart-zcm/
+      version: 0.1.0
+    - name: zcm-redis
+      repository: https://zhaoyf23.github.io/helm-chart-zcm/
+      version: 0.1.0
+    - name: zcm-timezone
+      repository: https://zhaoyf23.github.io/helm-chart-zcm/
+      version: 0.1.0
+    description: Base components before installing ZCM
+    digest: 69fe17f0bfb9923bf5862772fef149457eefbf0f42c92a33fe101fceb76fa60b
+    icon: file://./base.jpg
+    name: zcm-system-base
+    type: application
+    urls:
+    - https://zhaoyf23.github.io/helm-chart-zcm/zcm-system-base-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-02-01T09:05:14.533368518+08:00"
