@@ -43,6 +43,9 @@ dependencies:
   - name: zcm-env-local
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/
+  - name: zcm-env-nms
+    version: 0.1.0
+    repository: https://zhaoyf23.github.io/helm-chart-zcm/
   - name: zcm-midware-yum
     version: 0.1.0
     repository: https://zhaoyf23.github.io/helm-chart-zcm/
