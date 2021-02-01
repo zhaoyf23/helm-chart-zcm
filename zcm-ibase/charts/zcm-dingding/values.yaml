@@ -75,7 +75,7 @@ env:
   - name: ZCM_ZCIP_SERVER_IP
     valueFrom:
       configMapKeyRef:
-        name: zcm-env-base
+        name: zcm-env-cicd
         key: ZCM_ZCIP_SERVER_IP
   - name: ZCM_ZCIP_SERVER_PORT
     valueFrom:
